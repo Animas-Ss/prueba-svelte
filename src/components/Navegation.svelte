@@ -5,13 +5,13 @@
 <main>
   <nav class="container">
     <div class="container-proyectos" use:link>
-        <a href="./documentacion/html" class="proyecto">HTML</a>
-        <a href="./documentacion/css" class="proyecto">CSS</a>
-        <a href="./documentacion/javascript" class="proyecto">JAVASCRIPT</a>
-        <a href="./documentacion/node-js" class="proyecto">NODE.JS</a>
-        <a href="./documentacion/docker" class="proyecto">DOCKER</a>
-        <a href="./documentacion/react" class="proyecto">REACT</a>
-        <a href="./documentacion/svelte" class="proyecto">SVELTE</a>
+        <a href="/prueba-svelte/documentacion/html" class="proyecto">HTML</a>
+        <a href="/prueba-svelte/documentacion/css" class="proyecto">CSS</a>
+        <a href="/prueba-svelte/documentacion/javascript" class="proyecto">JAVASCRIPT</a>
+        <a href="/prueba-svelte/documentacion/node-js" class="proyecto">NODE.JS</a>
+        <a href="/prueba-svelte/documentacion/docker" class="proyecto">DOCKER</a>
+        <a href="/prueba-svelte/documentacion/react" class="proyecto">REACT</a>
+        <a href="/prueba-svelte/documentacion/svelte" class="proyecto">SVELTE</a>
     </div>
   </nav>
 </main>
