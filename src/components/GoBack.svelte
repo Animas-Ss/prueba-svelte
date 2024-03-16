@@ -3,7 +3,7 @@
 </script>
 
 <div use:link>
-    <a href="/prueba-svelte/">Go Back</a>
+    <a href="/">Go Back</a>
 </div>
 
 <style>

@@ -13,14 +13,14 @@
 
 <main>
   <Router>
-      <Route path="/prueba-svelte/" component={Navegation} /> 
-      <Route path="/prueba-svelte/documentacion/html" component={Html}/>
-      <Route path="/prueba-svelte/documentacion/css" component={Css}/>
-      <Route path="/prueba-svelte/documentacion/javascript" component={JavaScript}/>
-      <Route path="/prueba-svelte/documentacion/node-js" component={Nodejs}/>
-      <Route path="/prueba-svelte/documentacion/docker" component={Docker}/>
-      <Route path="/prueba-svelte/documentacion/react" component={React}/>
-      <Route path="/prueba-svelte/documentacion/svelte" component={Svelte}/>
+      <Route path="/" component={Navegation} /> 
+      <Route path="/documentacion/html" component={Html}/>
+      <Route path="/documentacion/css" component={Css}/>
+      <Route path="/documentacion/javascript" component={JavaScript}/>
+      <Route path="/documentacion/node-js" component={Nodejs}/>
+      <Route path="/documentacion/docker" component={Docker}/>
+      <Route path="/documentacion/react" component={React}/>
+      <Route path="/documentacion/svelte" component={Svelte}/>
   </Router>
 </main>
 
