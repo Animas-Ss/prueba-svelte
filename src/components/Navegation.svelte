@@ -1,5 +1,5 @@
 <script>
-  import { Link } from "svelte-routing";
+  import { Link, link } from "svelte-routing";
 </script>
 
 <div>
@@ -36,9 +36,9 @@
         </Link>
         </div>
         <div class="proyecto">
-          <Link to="/svelte">
+          <a href="/svelte" use:link>
           SVELTE
-        </Link>
+          </a>
         </div>
     </div>
   </nav>
