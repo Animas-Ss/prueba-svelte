@@ -1,20 +1,48 @@
 <script>
-  import { link } from "svelte-routing";
+  import { Link } from "svelte-routing";
 </script>
 
-<main>
+<div>
   <nav class="container">
-    <div class="container-proyectos" use:link>
-        <a href="/html" class="proyecto">HTML</a>
-        <a href="/css" class="proyecto">CSS</a>
-        <a href="/javascript" class="proyecto">JAVASCRIPT</a>
-        <a href="/node-js" class="proyecto">NODE.JS</a>
-        <a href="/docker" class="proyecto">DOCKER</a>
-        <a href="/react" class="proyecto">REACT</a>
-        <a href="/svelte" class="proyecto">SVELTE</a>
+    <div class="container-proyectos">
+      <div class="proyecto">
+        <Link to="/html">
+          HTML
+        </Link>
+      </div>
+      <div class="proyecto">
+          <Link to="/css" >
+          CSS
+        </Link>  
+      </div>
+      <div class="proyecto">
+          <Link to="/javascript">
+          JAVASCRIPT
+        </Link>
+        </div>
+        <div class="proyecto">
+          <Link to="/node-js">
+          NODE.JS
+        </Link>
+      </div>
+      <div class="proyecto">
+          <Link to="/docker">
+          DOCKER
+        </Link>
+        </div>
+        <div class="proyecto">
+          <Link to="/react">
+          REACT
+        </Link>
+        </div>
+        <div class="proyecto">
+          <Link to="/svelte">
+          SVELTE
+        </Link>
+        </div>
     </div>
   </nav>
-</main>
+</div>
 
 <style>
   .container {
