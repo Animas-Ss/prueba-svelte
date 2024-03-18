@@ -1,9 +1,9 @@
 <script>
-  import { Link, link } from "svelte-routing";
+  import { Link, link, links } from "svelte-routing";
 </script>
 
-<div>
-  <nav class="container">
+
+  <nav class="container" use:links>
     <div class="container-proyectos">
       <div class="proyecto">
         <Link to="/html">
@@ -30,19 +30,15 @@
           DOCKER
         </Link>
         </div>
-        <div class="proyecto">
-          <Link to="/react">
+        <a href="/react" class="proyecto">
           REACT
-        </Link>
-        </div>
-        <div class="proyecto">
-          <a href="/svelte" use:link>
+        </a>
+        <a href="/svelte" class="proyecto" use:link>
           SVELTE
-          </a>
-        </div>
+        </a>
     </div>
   </nav>
-</div>
+
 
 <style>
   .container {
