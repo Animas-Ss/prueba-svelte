@@ -1,49 +1,45 @@
 <script>
-  import { Link, link, links } from "svelte-routing";
+  import { links } from "svelte-routing";
+  import html from "../assets/html.svg";
+  import javascript from '../assets/javascript-logo.svg';
+  import css from '../assets/css.svg';
+  import nodeJs from '../assets/node.svg';
+  import docker from '../assets/logo-docker.svg';
+  import react from '../assets/react.svg';
+  import svelte from '../assets/svelte.svg';
 </script>
 
-
-  <nav class="container" use:links>
-    <div class="container-proyectos">
-      <div class="proyecto">
-        <Link to="/html">
-          HTML
-        </Link>
-      </div>
-      <div class="proyecto">
-          <Link to="/css" >
-          CSS
-        </Link>  
-      </div>
-      <div class="proyecto">
-          <Link to="/javascript">
-          JAVASCRIPT
-        </Link>
-        </div>
-        <div class="proyecto">
-          <Link to="/node-js">
-          NODE.JS
-        </Link>
-      </div>
-      <div class="proyecto">
-          <Link to="/docker">
-          DOCKER
-        </Link>
-        </div>
-        <a href="/react" class="proyecto">
-          REACT
-        </a>
-        <a href="/svelte" class="proyecto" use:link>
-          SVELTE
-        </a>
-    </div>
-  </nav>
-
+<nav class="container" use:links>
+  <div class="container-proyectos">
+    <a href="/documentacion/html" class="proyecto">
+      <img src={html} class="icono" alt="icon html" />
+    </a>
+    <a href="/documentacion/css" class="proyecto">
+      <img src={css} class="icono" alt="icon html" />
+    </a>
+    <a href="/documentacion/javascript" class="proyecto">
+      <img src={javascript} class="icono" alt="icon javascript" />
+    </a>
+    <a href="/documentacion/node-js" class="proyecto">
+      <img src={nodeJs} class="icono" alt="icon nodejs" />
+    </a>
+    <a href="/documentacion/docker" class="proyecto">
+      <img src={docker} class="icono" alt="icon docker" />
+    </a>
+    <a href="/documentacion/react" class="proyecto">
+      <img src={react} class="icono" alt="icon react" />
+    </a>
+    <a href="/documentacion/svelte" class="proyecto">
+      <img src={svelte} class="icono" alt="icon svelte" />
+    </a>
+  </div>
+</nav>
 
 <style>
   .container {
     width: 100%;
     height: 100vh;
+    font-family: "Roboto", sans-serif;
   }
   .proyecto {
     display: flex;
@@ -55,9 +51,14 @@
     font-size: 3rem;
     color: #ffffff;
     transition: all 500ms ease;
+    text-decoration: none;
+  }
+  .icono {
+    width: 40px;
+    height: 40px;
   }
   .container-proyectos {
-    padding: 20px;
+    padding: 60px;
     width: 100%;
     height: 100vh;
     background: #313131;
@@ -106,4 +107,31 @@
     transform: scale(1.1);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
   }
+  
+  @media (width < 1040px){
+    .container-proyectos{
+      grid: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 100px);
+      overflow: auto;
+    }
+    .proyecto:nth-child(7n + 1) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .proyecto:nth-child(7n + 2) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .proyecto:nth-child(7n + 4) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .proyecto:nth-child(7n + 7) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  }
+  
 </style>
