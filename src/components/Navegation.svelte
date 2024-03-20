@@ -110,6 +110,7 @@
   
   @media (width < 1040px){
     .container-proyectos{
+      padding: 30px;
       grid: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(7, 100px);
