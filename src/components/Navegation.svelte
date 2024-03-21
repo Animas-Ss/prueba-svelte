@@ -11,25 +11,25 @@
 
 <nav class="container" use:links>
   <div class="container-proyectos">
-    <a href="/documentacion/html" class="proyecto">
+    <a href="/html" class="proyecto">
       <img src={html} class="icono" alt="icon html" />
     </a>
-    <a href="/documentacion/css" class="proyecto">
+    <a href="/css" class="proyecto">
       <img src={css} class="icono" alt="icon html" />
     </a>
-    <a href="/documentacion/javascript" class="proyecto">
+    <a href="/javascript" class="proyecto">
       <img src={javascript} class="icono" alt="icon javascript" />
     </a>
-    <a href="/documentacion/node-js" class="proyecto">
+    <a href="/node-js" class="proyecto">
       <img src={nodeJs} class="icono" alt="icon nodejs" />
     </a>
-    <a href="/documentacion/docker" class="proyecto">
+    <a href="/docker" class="proyecto">
       <img src={docker} class="icono" alt="icon docker" />
     </a>
-    <a href="/documentacion/react" class="proyecto">
+    <a href="/react" class="proyecto">
       <img src={react} class="icono" alt="icon react" />
     </a>
-    <a href="/documentacion/svelte" class="proyecto">
+    <a href="/svelte" class="proyecto">
       <img src={svelte} class="icono" alt="icon svelte" />
     </a>
   </div>
@@ -110,7 +110,7 @@
   
   @media (width < 1040px){
     .container-proyectos{
-      padding: 30px;
+      padding: 10px;
       grid: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(7, 100px);

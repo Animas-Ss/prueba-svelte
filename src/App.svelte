@@ -14,13 +14,13 @@
 <main>
   <Router>
       <Route path="/" component={Navegation} /> 
-      <Route path="/documentacion/html" component={Html}/>
-      <Route path="/documentacion/css" component={Css}/>
-      <Route path="/documentacion/javascript" component={JavaScript}/>
-      <Route path="/documentacion/node-js" component={Nodejs}/>
-      <Route path="/documentacion/docker" component={Docker}/>
-      <Route path="/documentacion/react" component={React}/>
-      <Route path="/documentacion/svelte" component={Svelte}/>
+      <Route path="/html" component={Html}/>
+      <Route path="/css" component={Css}/>
+      <Route path="/javascript" component={JavaScript}/>
+      <Route path="/node-js" component={Nodejs}/>
+      <Route path="/docker" component={Docker}/>
+      <Route path="/react" component={React}/>
+      <Route path="/svelte" component={Svelte}/>
   </Router>
 </main>
 

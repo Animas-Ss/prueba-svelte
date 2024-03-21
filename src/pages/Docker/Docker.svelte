@@ -23,13 +23,13 @@
             {/if}
             <div class={menuShadow ? "activo" : "barra-lateral"}>
                 <div>
-  
+                    menu
                 </div>
             </div>
             <div class="apuntes">
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+                <div>2 - barra de busqueda - boton de tema</div>
+                <div>3 contenido</div>
+                <div>4 -sub temas </div>
             </div>
         </div>
     </div>
@@ -81,31 +81,26 @@
     } */
    /*  probamos grind */
    .container{
-      background: salmon;
+      background: #313131;
       border: 2px solid black;
-      border-radius: 10px;
       height: 100vh;
       display: grid;
       grid-template-columns: minmax(100px, 200px) 1fr;
-      grid-gap: 5px;
+      color: azure;
    }
-   .container div{
-    background: lightblue;
-    border: 1px solid #09f;
-   }
+
    .apuntes{
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-rows: 80px 1fr;
+    border-left: 2px solid black;
    }
    .apuntes div:nth-child(3n +1){
       grid-column: span 2;
-   }
-   .apuntes div:nth-child(3n +2){
-      background: red;
+      border-bottom: 2px solid black;
    }
    .apuntes div:nth-child(3n +3){
-     background: blueviolet;
+      border-left: 2px solid black;
    }
 
    @media (width < 1000px){
@@ -115,9 +110,10 @@
     grid-template-rows: 80px 70px 1fr ;
    }
    .apuntes div:nth-child(3n +3){
-     background: blueviolet;
      grid-column: span 2;
      grid-row: 2 / 3;
+     border-bottom: 2px solid black;
+     border-left: 0;
    }
    }
 
@@ -142,7 +138,6 @@
     z-index: 4;
    }
    .apuntes div:nth-child(3n +3){
-     background: blueviolet;
      grid-column: span 2;
      grid-row: 2 / 3;
    }
