@@ -2,41 +2,38 @@
   import GoBack from "../../components/GoBack.svelte";
   let menuShadow = false;
   let w = window.innerWidth;
-  window.addEventListener('resize', () => {
-    w = window.innerWidth
-  })
+  window.addEventListener("resize", () => {
+    w = window.innerWidth;
+  });
 
   const handleShadow = () => {
     menuShadow = !menuShadow;
-  }
+  };
 </script>
 
 <section>
-    <div class="contenido">
-<!--         <div class="titulos">
-            <GoBack/>
+  <div class="contenido">
+    <div class="container">
+      {#if w < 600}
+        <button class="bt-menu" on:click={handleShadow}>menu</button>
+      {/if}
+      <div class={menuShadow ? "activo" : "barra-lateral"}>
+        <div>menu</div>
+      </div>
+      <div class="apuntes">
+        <div>2 - barra de busqueda - boton de tema</div>
+        <div>
+            <GoBack />
             <h1>Docker documentacion</h1>
-        </div> -->
-        <div class="container">
-            {#if w < 600}
-            <button class="bt-menu" on:click={handleShadow}>menu</button>
-            {/if}
-            <div class={menuShadow ? "activo" : "barra-lateral"}>
-                <div>
-                    menu
-                </div>
-            </div>
-            <div class="apuntes">
-                <div>2 - barra de busqueda - boton de tema</div>
-                <div>3 contenido</div>
-                <div>4 -sub temas </div>
-            </div>
         </div>
+        <div>4 -sub temas</div>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-/*     section{
+  /*     section{
         position: relative;
         width: 100%;
         height: 100vh;
@@ -79,67 +76,67 @@
         grid-column: 3 / 13;
         grid-row: auto;
     } */
-   /*  probamos grind */
-   .container{
-      background: #313131;
-      border: 2px solid black;
-      height: 100vh;
-      display: grid;
-      grid-template-columns: minmax(100px, 200px) 1fr;
-      color: azure;
-   }
+  /*  probamos grind */
+  .container {
+    background: #313131;
+    border: 2px solid black;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+    color: azure;
+  }
 
-   .apuntes{
+  .apuntes {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-rows: 80px 1fr;
     border-left: 2px solid black;
-   }
-   .apuntes div:nth-child(3n +1){
+  }
+  .apuntes div:nth-child(3n + 1) {
+    grid-column: span 2;
+    border-bottom: 2px solid black;
+  }
+  .apuntes div:nth-child(3n + 3) {
+    border-left: 2px solid black;
+  }
+
+  @media (width < 1000px) {
+    .apuntes {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 70px 1fr;
+    }
+    .apuntes div:nth-child(3n + 3) {
       grid-column: span 2;
+      grid-row: 2 / 3;
       border-bottom: 2px solid black;
-   }
-   .apuntes div:nth-child(3n +3){
-      border-left: 2px solid black;
-   }
-
-   @media (width < 1000px){
-    .apuntes{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 70px 1fr ;
-   }
-   .apuntes div:nth-child(3n +3){
-     grid-column: span 2;
-     grid-row: 2 / 3;
-     border-bottom: 2px solid black;
-     border-left: 0;
-   }
-   }
-
-   @media (width < 600px){
-    .container{
-        grid-template-columns: 1fr;
+      border-left: 0;
     }
-    .barra-lateral{
-    display: none
-   }
-    .activo{
-    display: grid;
-    position: absolute;
-    width: 200px;
-    height: 100%;
-    background: black;
+  }
+
+  @media (width < 600px) {
+    .container {
+      grid-template-columns: 1fr;
     }
-   .bt-menu{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    z-index: 4;
-   }
-   .apuntes div:nth-child(3n +3){
-     grid-column: span 2;
-     grid-row: 2 / 3;
-   }
-   }
+    .barra-lateral {
+      display: none;
+    }
+    .activo {
+      display: grid;
+      position: absolute;
+      width: 200px;
+      height: 100%;
+      background: black;
+    }
+    .bt-menu {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 4;
+    }
+    .apuntes div:nth-child(3n + 3) {
+      grid-column: span 2;
+      grid-row: 2 / 3;
+    }
+  }
 </style>
